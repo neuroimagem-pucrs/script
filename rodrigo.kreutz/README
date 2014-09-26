@@ -1,1 +1,4 @@
-Apenas testando como utilizar o GitHub
+Scripts utilizados:
+
+segmentation_elderly.tcsh -> script utilizado para realizar a segmentacao de cerebros de idosos que apresentam grande nivel de atrofio. Tambem
+                             realiza o corregistro do cerebro em MNI.
