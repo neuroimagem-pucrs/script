@@ -8,7 +8,7 @@ else
 endif
 
 if ( ! -f ./$1+tlrc.HEAD ) then
-	@auto_tlrc -base MNI_caez_N27+tlrc -input $1+orig -no_ss
+	3dQwarp -allineate -allinkill -workhard -inilev 5 -maxlev 7 -nowarp -base MNI_caez_N27+tlrc.HEAD -source $1+orig.HEAD
 else
 	echo "Arquivo TLRC ja existe."
 endif
