@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ~/DATA/MCRUCIUS/CAT007/visit1/ANAT/TESTAR_SS
+
 if [ ! -f ./$1+orig.HEAD ]; then
 	3dSkullStrip -input CAT007.ANAT.nii.gz 	\
 		     -no_touchup 		\
@@ -12,7 +14,6 @@ if [ ! -f ./$1+orig.HEAD ]; then
 		     -init_radius 75		\
 		     -prefix $1
 	rm *.ply
-	gzip -1v $1+orig.BRIK
 else
 	echo "Arquivo Skullstrip ja existe."
 fi
@@ -21,14 +22,14 @@ if [ ! -f ./$1+tlrc.HEAD ]; then
 	3dQwarp -allineate			\
 		-allinkill			\
 		-workhard			\
- 		-maxlev 0			\
+ 		-maxlev 7			\
  		-nowarp				\
+		-blur 0 3			\
  		-base MNI_caez_N27+tlrc.HEAD	\
  		-source $1+orig.HEAD		\
 		-prefix $1
-	gzip -1v $1+tlrc.BRIK
 else
 	echo "Arquivo TLRC ja existe."
 fi
 
-
+gzip -1v *.BRIK
