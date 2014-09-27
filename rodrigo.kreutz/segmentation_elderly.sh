@@ -21,10 +21,11 @@ if [ ! -f ./$1+tlrc.HEAD ]; then
 	3dQwarp -allineate			\
 		-allinkill			\
 		-workhard			\
- 		-maxlev 3			\
+ 		-maxlev 0			\
  		-nowarp				\
  		-base MNI_caez_N27+tlrc.HEAD	\
- 		-source $1+orig.HEAD
+ 		-source $1+orig.HEAD		\
+		-prefix $1
 	gzip -1v $1+tlrc.BRIK
 else
 	echo "Arquivo TLRC ja existe."
