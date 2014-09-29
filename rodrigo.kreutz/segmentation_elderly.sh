@@ -28,6 +28,7 @@ if [ ! -f ./$1+tlrc.HEAD ]; then
  		-base MNI_caez_N27+tlrc.HEAD	\
  		-source $1+tlrc.HEAD		\
 		-prefix $1
+	3dmerge -1noneg -1clip 10 -prefix $1 -overwrite $1+tlrc.HEAD
 else
 	echo "Arquivo TLRC ja existe."
 fi
