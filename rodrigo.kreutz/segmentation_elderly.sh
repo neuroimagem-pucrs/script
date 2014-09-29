@@ -19,14 +19,14 @@ else
 fi
 
 if [ ! -f ./$1+tlrc.HEAD ]; then
-	3dQwarp -allineate			\
-		-allinkill			\
-		-workhard			\
+	@auto_tlrc -base MNI_caez_N27+tlrc -input $1+orig -no_ss
+	3dQwarp	-workhard			\
  		-maxlev 7			\
  		-nowarp				\
 		-blur 0 3			\
+		-overwrite			\
  		-base MNI_caez_N27+tlrc.HEAD	\
- 		-source $1+orig.HEAD		\
+ 		-source $1+tlrc.HEAD		\
 		-prefix $1
 else
 	echo "Arquivo TLRC ja existe."
