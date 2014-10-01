@@ -42,7 +42,8 @@ for subj in ${subjs[*]} ; do
 		else
 			echo "Arquivo TLRC ja existe."
 		fi
+
+		gzip -9v *.BRIK
 	done
 done
 
-gzip -9v *.BRIK
