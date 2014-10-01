@@ -38,7 +38,7 @@ for subj in ${subjs[*]} ; do
  				-base MNI_caez_N27+tlrc.HEAD	\
  				-source NS+tlrc.HEAD		\
 				-prefix NS
-			3dmerge -1noneg -1clip 10 -prefix NS -overwrite $1+tlrc.HEAD
+			3dmerge -1noneg -1clip 10 -prefix NS -overwrite NS+tlrc.HEAD
 		else
 			echo "Arquivo TLRC ja existe."
 		fi
