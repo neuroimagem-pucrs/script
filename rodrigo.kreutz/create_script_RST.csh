@@ -33,9 +33,17 @@ afni_proc.py \
 	-tshift_opts_ts -tpattern alt+z2			\
 	-volreg_align_e2a					\
 	-volreg_tlrc_warp					\
+	-tlrc_NL_warp						\
+	-tlrc_opts_at -qworkhard 				\
 	-align_opts_aea -skullstrip_opts 			\
-		-shrink_fac_bot_lim 0.8 			\
+		-shrink_fac_bot_lim 0.65 			\
 		-no_pushout					\
+		-no_touchup					\
+		-use_skull					\
+		-perc_int 0.1					\
+		-orig_vol					\
+		-avoid_vent -avoid_vent				\
+		-init_radius 75					\
 	-tlrc_base ${template}					\
 	-mask_segment_anat yes					\
 	-blur_filter -1blur_fwhm				\
@@ -50,8 +58,6 @@ afni_proc.py \
 		-regress_est_blur_errts
 
 exit 
-# Some extra options to consider
--align_opts_aea -giant_move
 
 
 
