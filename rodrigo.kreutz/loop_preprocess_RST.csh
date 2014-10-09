@@ -6,7 +6,7 @@
 
 set script_loc = `pwd`
 set study = CAT
-set subjs = (006 007 008 009 010 011 012 013 014 015 016 017)
+set subjs = (007 008 009 010 011)
 #set visits = (visit1)
 set visits = (visit1 visit2)
 
@@ -18,7 +18,7 @@ foreach visit (${visits})
 	
 	# Now get into the subjects folder
 
-	cd ..
+	cd ~/DATA/MCRUCIUS
 	cd ${study}${subj}
 
 	cd ${visit}
