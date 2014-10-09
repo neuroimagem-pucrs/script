@@ -34,7 +34,6 @@ afni_proc.py \
 	-volreg_align_e2a					\
 	-volreg_tlrc_warp					\
 	-tlrc_NL_warp						\
-	-tlrc_opts_at -qworkhard 				\
 	-align_opts_aea -skullstrip_opts 			\
 		-shrink_fac_bot_lim 0.65 			\
 		-no_pushout					\
