@@ -23,6 +23,7 @@ for subj in ${subjs[*]} ; do
 		     		     -orig_vol				\
 		     		     -avoid_vent -avoid_vent		\
 		     		     -init_radius 75			\
+				     -ld 30				\
 		     		     -prefix NS
 		else
 			echo "Arquivo Skullstrip ja existe."
