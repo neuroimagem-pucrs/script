@@ -1,4 +1,17 @@
 Scripts utilizados:
 
-segmentation_elderly.tcsh -> script utilizado para realizar a segmentacao de cerebros de idosos que apresentam grande nivel de atrofio. Tambem
-                             realiza o corregistro do cerebro em MNI.
+segmentation_elderly.sh -> script utilizado para realizar a segmentacao de cerebros de idosos que apresentam grande nivel de atrofio. Tambem
+                           realiza o corregistro do cerebro em MNI.
+
+loop_preprocess_RST.csh -> script para realizar toda a etapa de preprocessamento.
+			   esse script faz um loop entre os 'subjects' e chama outro script que realiza o preprocessamento.
+			   foi criado a partir do modelo de Alexandre Franco
+
+create_script_RST.csh   -> script que utiliza o afni_proc.py gerar o script de preprocessamento.
+			   este script e chamado dentro de 'loop_preprocess_RST.csh'
+			   este script foi otimizado para o preprocessamento de cerebros com muito atrofio de acordo com o script 'segmentation_elderly.sh'
+			   foi criado a partir do modelo de Alexandre Franco
+
+convert_dicom		-> script que converte uma diretorio DICOM em imagens NIFTI.
+			   precisa ter o diretorio DICOM ou um arquivo 'dicom.tar.gz' com o diretorio dentro.
+			   foi criado a partir do modelo de Alexandre Franco
