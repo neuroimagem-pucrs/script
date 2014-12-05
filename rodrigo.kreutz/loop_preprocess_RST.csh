@@ -6,8 +6,7 @@
 
 set script_loc = `pwd`
 set study = CAT
-set subjs = (007 008 009 010 011)
-#set visits = (visit1)
+set subjs = (020)
 set visits = (visit1 visit2)
 
 foreach subj (${subjs})
